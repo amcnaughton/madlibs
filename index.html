@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html ng-app="madlibs">
+
+<head>
+    <title>Madlibs</title>
+    <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+    <div ng-controller="madlibs" class="container" ng-init="data=[
+          [
+            {
+              placeholder: 'Female name',
+              model: 'femaleName'
+            },
+            {
+              placeholder: 'Job title',
+              model: 'jobTitle'
+            },
+            {
+              placeholder: 'Tedious task',
+              model: 'tediousTask'
+            }
+          ],
+          [
+            {
+              placeholder: 'Dirty task',
+              model: 'dirtyTask'
+            },
+            {
+              placeholder: 'Celebrity',
+              model: 'celebrity'
+            },
+            {
+              placeholder: 'Useless skill',
+              model: 'uselessSkill'
+            }
+          ],
+          [
+            {
+              placeholder: 'Obnoxious celebrity',
+              model: 'obnoxiousCelebrity'
+            },
+            {
+              placeholder: 'Huge number',
+              model: 'hugeNumber'
+            },
+            {
+              placeholder: 'Adjective',
+              model: 'adjective'
+            }
+          ]
+        ]">
+
+        <div class="row header">
+            <div class="col-xs-2">
+                <img src="images/mad-lib-happy-face.png"></img>
+            </div>
+            <div class="col-xs-10 text-center">
+                <img src="images/ng-mad-libs-logo.png"></img>
+            </div>
+        </div>
+
+        <!--<div class="row input">-->
+        <!--    <div class="col-xs-12">-->
+        <!--        Provide the following words:-->
+        <!--    </div>-->
+
+        <!--    <div ng-repeat="elements in data">-->
+        <!--        <div class="col-xs-4">-->
+        <!--            <div ng-repeat="element in elements">-->
+        <!--                {{ element}}-->
+        <!--                <input type="text" placeholder="{{element.placeholder}}" ng-model="element.model">-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </div>-->
+
+        <!--</div>-->
+
+
+
+        <div class="row input">
+            <div class="col-xs-12 prompt">
+                Provide the following words:
+            </div>
+
+            <div class="col-xs-4">
+                <input type="text" placeholder="Female name" ng-model="femaleName">
+                <br>
+                <input type="text" placeholder="Job title" ng-model="jobTitle">
+                <br>
+                <input type="text" placeholder="Tedious task" ng-model="tediousTask">
+                <br>
+
+            </div>
+            <div class="col-xs-4">
+                <input type="text" placeholder="Dirty task" ng-model="dirtyTask">
+                <br>
+                <input type="text" placeholder="Celebrity" ng-model="celebrity">
+                <br>
+                <input type="text" placeholder="Useless skill" ng-model="uselessSkill">
+                <br>
+            </div>
+            <div class="col-xs-4">
+                <input type="text" placeholder="Obnoxious" ng-model="obnoxiousCelebrity">
+                <br>
+                <input type="text" placeholder="Huge number" ng-model="hugeNumber">
+                <br>
+                <input type="text" placeholder="Adjective" ng-model="adjective">
+                <br> </div>
+        </div>
+
+
+        <div class="row results">
+            <div class="col-xs-12">
+                <p>{{femaleName || "\{\{femaleName\}\}"}} was a {{jobTitle || "\{\{jobTitle\}\}"}} who loved technology. Although she loved parts of her job, she absolutely hated {{tediousTask || "\{\{tediousTask\}\}"}} and {{dirtyTask || "\{\{dirtyTask\}\}"}}.
+                    So, {{femaleName || "\{\{femaleName\}\}"}} met with her life mentor {{celebrity || "\{\{celebrity\}\}"}} who told her to learn how to {{uselessSkill || "\{\{uselessSkill\}\}"}} with Thinkful. Thinkful didn't offer a course on {{uselessSkill
+                    || "\{\{uselessSkill\}\}"}} so she studied programming instead. </p>
+                <p>What a great decision! With her new skills, {{femaleName || "\{\{femaleName\}\}"}} built a(n) {{adjective || "\{\{adjective\}\}"}} robot named {{obnoxiousCelebrity || "\{\{obnoxiousCelebrity\}\}"}} that not only loved {{dirtyTask}} but
+                    did it {{hugeNumber || "\{\{hugeNumber\}\}"}} times faster. </p>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

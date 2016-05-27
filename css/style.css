@@ -1,0 +1,21 @@
+body {
+    font-size: 1.6em;
+}
+
+.container {
+    background-color: white;
+    width: 800px;
+    border: 1px solid;
+}
+
+.header, .prompt {
+    padding-bottom: 20px;
+}
+
+.header img {
+    max-height: 116px;
+}
+
+.results {
+    padding-top: 20px;
+}
