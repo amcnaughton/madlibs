@@ -6,9 +6,11 @@ body {
     background-color: white;
     width: 800px;
     border: 1px solid;
+    padding-bottom: 10px;
 }
 
-.header, .prompt {
+.header,
+.prompt {
     padding-bottom: 20px;
 }
 
@@ -18,4 +20,10 @@ body {
 
 .results {
     padding-top: 20px;
+}
+
+.btn {
+    margin-top: 15px;
+    margin-right: 55px;
+    margin-bottom: 15px;
 }
