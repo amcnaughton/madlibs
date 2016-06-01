@@ -4,4 +4,10 @@
 
 This version of Madlibs uses Angular controllers, interpolation, forms, and more.
 
+## Input page mockup
+![Input](https://raw.githubusercontent.com/amcnaughton/madlibs/master/images/madlibs1.png)
+
+## Results page mockup
+![Result](https://raw.githubusercontent.com/amcnaughton/madlibs/master/images/madlibs2.png)
+
 Allan
