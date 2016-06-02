@@ -1,36 +1,37 @@
 angular.module('madlibs', [])
-    .controller('madlibsController', ['$scope', function($scope) {
+    .controller('madlibsController', function() {
 
-        $scope.showResults = false;
-        $scope.errors = '';
+        this.showResults = false;
+        this.errors = '';
 
-        $scope.generate = function() {
+        this.generate = function() {
 
             // all fields must be present
-            if (!$scope.femaleName || !$scope.jobTitle || !$scope.tediousTask || !$scope.dirtyTask || !$scope.celebrity ||
-                !$scope.uselessSkill || !$scope.obnoxiousCelebrity || !$scope.hugeNumber || !$scope.adjective) {
-                $scope.errors = "Please complete all the input fields.";
+            if (!this.femaleName || !this.jobTitle || !this.tediousTask || !this.dirtyTask || !this.celebrity ||
+                !this.uselessSkill || !this.obnoxiousCelebrity || !this.hugeNumber || !this.adjective) {
+                this.errors = "Please complete all the input fields.";
             }
             else
-            if (!isNumber($scope.hugeNumber)) {
+            if (!isNumber(this.hugeNumber)) {
                 // hugeNumber must be numeric
-                $scope.errors = "hugeNumber must be numeric.";
+                this.errors = "hugeNumber must be numeric.";
             }
             else {
                 // all is good
-                $scope.errors = '';
-                $scope.showResults = true;
+                this.errors = '';
+                this.showResults = true;
             }
+
         }
 
         // let's try again
-        $scope.reset = function() {
+        this.reset = function() {
 
-            $scope.errors = '';
-            $scope.showResults = false;
-            $scope.femaleName = $scope.jobTitle = $scope.tediousTask = $scope.dirtyTask = $scope.celebrity = $scope.uselessSkill = $scope.obnoxiousCelebrity = $scope.hugeNumber = $scope.adjective = '';
+            this.errors = '';
+            this.showResults = false;
+            this.femaleName = this.jobTitle = this.tediousTask = this.dirtyTask = this.celebrity = this.uselessSkill = this.obnoxiousCelebrity = this.hugeNumber = this.adjective = '';
         }
-    }]);
+    });
 
 
 function isNumber(n) {

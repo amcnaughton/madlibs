@@ -23,57 +23,57 @@
     </div>
 
 
-    <div ng-show="!showResults" class="row input">
+    <div ng-show="!m.showResults" class="row input">
       <div class="col-xs-12 prompt">
         Provide the following words:
       </div>
 
       <div class="col-xs-4">
-        <input type="text" placeholder="Female name" ng-model="femaleName">
+        <input type="text" placeholder="Female name" ng-model="m.femaleName">
         <br>
-        <input type="text" placeholder="Job title" ng-model="jobTitle">
+        <input type="text" placeholder="Job title" ng-model="m.jobTitle">
         <br>
-        <input type="text" placeholder="Tedious task" ng-model="tediousTask">
+        <input type="text" placeholder="Tedious task" ng-model="m.tediousTask">
         <br>
 
       </div>
       <div class="col-xs-4">
-        <input type="text" placeholder="Dirty task" ng-model="dirtyTask">
+        <input type="text" placeholder="Dirty task" ng-model="m.dirtyTask">
         <br>
-        <input type="text" placeholder="Celebrity" ng-model="celebrity">
+        <input type="text" placeholder="Celebrity" ng-model="m.celebrity">
         <br>
-        <input type="text" placeholder="Useless skill" ng-model="uselessSkill">
+        <input type="text" placeholder="Useless skill" ng-model="m.uselessSkill">
         <br>
       </div>
       <div class="col-xs-4">
-        <input type="text" placeholder="Obnoxious" ng-model="obnoxiousCelebrity">
+        <input type="text" placeholder="Obnoxious" ng-model="m.obnoxiousCelebrity">
         <br>
-        <input type="text" placeholder="Huge number" ng-model="hugeNumber">
+        <input type="text" placeholder="Huge number" ng-model="m.hugeNumber">
         <br>
-        <input type="text" placeholder="Adjective" ng-model="adjective">
+        <input type="text" placeholder="Adjective" ng-model="m.adjective">
         <br>
       </div>
 
       <div class="col-xs-12 generate">
-        <button ng-click="generate()" class="btn btn-default pull-right">Generate My Madlib</button>
+        <button ng-click="m.generate()" class="btn btn-default pull-right">Generate My Madlib</button>
       </div>
     </div>
 
-    <div ng-show="errors.length" class="alert alert-danger fade in">
-      <a href="#" class="close" data-dismiss="alert">&times;</a><strong>Error!</strong> {{ errors }}
+    <div ng-show="m.errors.length" class="alert alert-danger fade in">
+      <a href="#" class="close" data-dismiss="alert">&times;</a><strong>Error!</strong> {{ m.errors }}
     </div>
 
-    <div ng-show="showResults" class="row results">
+    <div ng-show="m.showResults" class="row results">
       <div class="col-xs-12">
-        <p>{{femaleName || "\{\{femaleName\}\}"}} was a {{jobTitle || "\{\{jobTitle\}\}"}} who loved technology. Although she loved parts of her job, she absolutely hated {{tediousTask || "\{\{tediousTask\}\}"}} and {{dirtyTask || "\{\{dirtyTask\}\}"}}.
-          So, {{femaleName || "\{\{femaleName\}\}"}} met with her life mentor {{celebrity || "\{\{celebrity\}\}"}} who told her to learn how to {{uselessSkill || "\{\{uselessSkill\}\}"}} with Thinkful. Thinkful didn't offer a course on {{uselessSkill
+        <p>{{m.femaleName || "\{\{femaleName\}\}"}} was a {{m.jobTitle || "\{\{jobTitle\}\}"}} who loved technology. Although she loved parts of her job, she absolutely hated {{m.tediousTask || "\{\{tediousTask\}\}"}} and {{m.dirtyTask || "\{\{dirtyTask\}\}"}}.
+          So, {{m.femaleName || "\{\{femaleName\}\}"}} met with her life mentor {{m.celebrity || "\{\{celebrity\}\}"}} who told her to learn how to {{m.uselessSkill || "\{\{uselessSkill\}\}"}} with Thinkful. Thinkful didn't offer a course on {{m.uselessSkill
           || "\{\{uselessSkill\}\}"}} so she studied programming instead. </p>
-        <p>What a great decision! With her new skills, {{femaleName || "\{\{femaleName\}\}"}} built a(n) {{adjective || "\{\{adjective\}\}"}} robot named {{obnoxiousCelebrity || "\{\{obnoxiousCelebrity\}\}"}} that not only loved {{dirtyTask}} but did it
-          {{hugeNumber || "\{\{hugeNumber\}\}"}} times faster. </p>
+        <p>What a great decision! With her new skills, {{m.femaleName || "\{\{femaleName\}\}"}} built a(n) {{m.adjective || "\{\{adjective\}\}"}} robot named {{m.obnoxiousCelebrity || "\{\{obnoxiousCelebrity\}\}"}} that not only loved {{dirtyTask}} but did it
+          {{m.hugeNumber || "\{\{hugeNumber\}\}"}} times faster. </p>
       </div>
 
       <div class="col-xs-12">
-        <button ng-click="reset()" class="btn btn-default pull-right">Start Over</button>
+        <button ng-click="m.reset()" class="btn btn-default pull-right">Start Over</button>
       </div>
     </div>
 
